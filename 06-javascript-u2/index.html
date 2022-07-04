@@ -1,0 +1,55 @@
+<!-- JAVASCRIPT - UNIDAD 2 -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT - UNIDAD 2</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      .root {
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root"></div>
+    <!-- <script src="index.js"></script> -->
+    <script>
+      // En consola:
+      for (let i = 11; i >= 9; i--) {
+        console.log(`La tabla del ${i}:`);
+
+        for (let j = 1; j <= 9; j++) {
+          console.log(`${i} x ${j} = ${i * j}`);
+        }
+
+        console.log(`\n`);
+      }
+
+      // En document:
+      const root = document.querySelector(".root");
+
+      const tabla = (numero) => {
+        const b = document.createElement("b");
+        b.innerHTML = `La tabla del ${numero}:`;
+        root.append(b);
+
+        for (let j = 1; j <= 9; j++) {
+          const div = document.createElement("div");
+          div.innerHTML = `${numero} x ${j} = ${numero * j}`;
+          root.append(div);
+        }
+
+        const br = document.createElement("br");
+        root.append(br);
+      };
+
+      tabla(11);
+      tabla(10);
+      tabla(9);
+    </script>
+  </body>
+</html>

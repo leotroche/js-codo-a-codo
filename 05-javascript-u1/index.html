@@ -1,0 +1,32 @@
+<!-- JAVASCRIPT - UNIDAD 1 -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT - UNIDAD 1</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      .root {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root"></div>
+    <!-- <script src="index.js"></script> -->
+    <script>
+      // En consola:
+      const primera = 40;
+      const segunda = 16;
+      const sumatotal = primera + segunda;
+      console.log(`La suma total es: ${sumatotal}`);
+
+      // En document:
+      const root = document.querySelector(".root");
+      root.innerHTML = `<b>La suma total es: ${sumatotal}</b>`;
+    </script>
+  </body>
+</html>

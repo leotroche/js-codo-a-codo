@@ -1,0 +1,74 @@
+<!-- HTML - UNIDAD 2 -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - UNIDAD 2</title>
+    <!-- Algunos estilos para el formulario -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #333;
+        background-color: #eee;
+        padding: 16px;
+      }
+      form {
+        border: 1px solid #4caf50;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+      }
+      input,
+      label {
+        width: 100%;
+        padding: 8px;
+        display: block;
+      }
+      label {
+        font-weight: 700;
+        color: #4caf50;
+      }
+      input {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Formulario -->
+    <form action="#" method="post">
+      <label for="dni">DNI</label>
+      <input type="number" name="dni" id="dni" required />
+      <br />
+      <label for="user">Usuario</label>
+      <input type="text" name="user" id="user" required />
+      <br />
+      <label for="pass">Contraseña</label>
+      <input type="password" name="pass" id="pass" required />
+      <br />
+      <input type="submit" value="Enviar" />
+    </form>
+    <!-- Script para prevenir el envio del formulario -->
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("click", (e) => e.preventDefault());
+    </script>
+  </body>
+</html>

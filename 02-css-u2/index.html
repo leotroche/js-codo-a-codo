@@ -1,0 +1,52 @@
+<!-- CSS - UNIDAD 2 -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - UNIDAD 2</title>
+    <!-- Algunos estilos para las cajas -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Times New Roman", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #333;
+        background-color: #eee;
+        padding: 16px;
+      }
+      .container {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        font-size: 2rem;
+      }
+      .item {
+        background-color: #ff0000;
+        color: #ffff00;
+        min-width: 200px;
+        min-height: 200px;
+      }
+      .item:nth-child(2) {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cajas -->
+    <div class="container">
+      <div class="item">uno</div>
+      <div class="item">dos</div>
+      <div class="item">tres</div>
+      <div class="item">cuatro</div>
+    </div>
+  </body>
+</html>

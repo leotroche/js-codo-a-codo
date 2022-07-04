@@ -1,0 +1,114 @@
+<!-- JAVASCRIPT - UNIDAD 3 -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT - UNIDAD 3</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- Algunos estilos para el formulario -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 14px;
+        padding: 1rem;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form {
+        border: 1px solid #ccc;
+        padding: 16px;
+      }
+
+      label {
+        display: block;
+      }
+
+      input {
+        margin: 10px;
+        padding: 0.5rem;
+      }
+
+      input[type="submit"] {
+        margin: 10px;
+        padding: 10px;
+      }
+
+      h2 {
+        color: rgb(192, 0, 0);
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Ingreso al Sistema</h2>
+      <form id="form" action="#" method="POST">
+        <label for="user">Usuario</label>
+        <input id="user" type="text" name="user" />
+        <br />
+
+        <label for="pass">Contraseña</label>
+        <input id="pass" type="password" name="pass" />
+
+        <br />
+        <input type="submit" value="Ingresar" />
+      </form>
+    </div>
+
+    <!-- <script src="./control.js"></script> -->
+    <!-- codigo de control.js -->
+    <script>
+      const form = document.querySelector("#form");
+      const user = document.querySelector("#user");
+      const pass = document.querySelector("#pass");
+
+      const validar = () => {
+        if (user.value.length === 0 && pass.value.length === 0) {
+          alert("Campos vacios");
+          return false;
+        }
+
+        if (user.value.length === 0) {
+          alert("El usuario no puede estar vacio");
+          return false;
+        } else if (!user.value.includes("@")) {
+          alert("El usuario no incluye @");
+          return false;
+        }
+
+        if (pass.value.length === 0) {
+          alert("La contraseña no puede estar vacia");
+          return false;
+        }
+
+        return true;
+      };
+
+      const onSubmit = (e) => {
+        // evitar que se envie el formulario
+        e.preventDefault();
+
+        if (validar()) {
+          alert("Usuario y contraseña correctos. Bienvenido");
+        }
+      };
+
+      form.addEventListener("submit", onSubmit);
+    </script>
+  </body>
+</html>
